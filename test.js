@@ -42,7 +42,6 @@ test('create-callback:', function () {
       test.ifError(!err)
       test.equal(str, undefined)
       test.equal(err.code, 'ENOENT')
-      test.equal(err.message.indexOf('no such file or directory') !== -1, true)
       done()
     })
   })
