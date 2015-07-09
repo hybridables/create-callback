@@ -1,0 +1,20 @@
+{
+  "name": "create-callback",
+  "version": "0.0.0",
+  "description": "Create callback api from synchronous function. Same as `make-callback`, but won't handle generators and if async function is given returns it.",
+  "repository": "tunnckoCore/create-callback",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "handle-arguments": "~3.0.2",
+    "is-async-function": "~1.1.0"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "keywords": []
+}
