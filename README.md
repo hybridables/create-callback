@@ -16,12 +16,31 @@ npm test
 > For more use-cases see the [tests](./test.js)
 
 ```js
+var fs = require('fs')
 var createCallback = require('create-callback')
+
+var parseJsonAsync = createCallback(JSON.parse)
+var readFileAsync = createCallback(fs.readFileSync)
+var readAsync = createCallback(fs.readFile)
+var readFile = createCallback(fs.readFileSync)
+
+readFileAsync('./package.json') //=> throws TypeError
+readAsync('./package.json', 'utf8', function (err, res) {
+  console.error(err) //=> null
+  console.log(res) //=> content of 'package.json'
+})
+readFile('./package.json', 'utf8', function (err, res) {
+  console.error(err) //=> null
+  console.log(res) //=> content of 'package.json'
+})
+parseJsonAsync('{"foo":"bar"}', function (err, res) {
+  console.error(err) //=> null
+  console.log(res) //=> {foo: 'bar'}
+})
 ```
 
 
 ## Contributing
-
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/create-callback/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
 
