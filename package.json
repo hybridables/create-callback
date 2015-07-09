@@ -16,5 +16,25 @@
   "devDependencies": {
     "assertit": "^0.1.0"
   },
-  "keywords": []
+  "keywords": [
+    "api",
+    "async",
+    "asynchronous",
+    "callback",
+    "cb",
+    "create",
+    "fn",
+    "function",
+    "handle",
+    "hybrid",
+    "hybridify",
+    "hybrids",
+    "is",
+    "is-async",
+    "isasync",
+    "promises",
+    "sync",
+    "synchronous",
+    "utils"
+  ]
 }
