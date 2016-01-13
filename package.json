@@ -1,6 +1,6 @@
 {
   "name": "create-callback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create callback api from synchronous function. Same as `make-callback`, but won't handle generators and if async function is given returns it.",
   "repository": "tunnckoCore/create-callback",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
