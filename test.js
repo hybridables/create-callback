@@ -14,6 +14,16 @@ var test = require('assertit')
 var createCallback = require('./index')
 
 test('create-callback:', function () {
+  test('should throw TypeError if `fn` not function', function (done) {
+    function fixture () {
+      var readFileAsync = createCallback(1234567)
+      readFileAsync('./package.json')
+    }
+
+    test.throws(fixture, TypeError)
+    test.throws(fixture, /is-async-function expect a function/)
+    done()
+  })
   test('should throw TypeError if return function dont have callback', function (done) {
     function fixture () {
       var readFileAsync = createCallback(fs.readFileSync)
