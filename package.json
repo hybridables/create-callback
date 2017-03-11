@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "handle-arguments": "~3.0.2",
-    "is-async-function": "~1.1.0"
+    "is-async-function": "~1.2.3"
   },
   "devDependencies": {
     "assertit": "^0.1.0"
